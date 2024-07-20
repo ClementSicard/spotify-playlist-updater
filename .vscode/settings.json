@@ -16,11 +16,11 @@
         "--settings-path",
         "pyproject.toml"
     ],
-    "black-formatter.importStrategy": "fromEnvironment",
+    "black-formatter.importStrategy": "useBundled",
     "black-formatter.path": [
         "poetry",
         "run",
-        "pyink"
+        "black"
     ],
     "black-formatter.args": [
         "--config=./pyproject.toml"

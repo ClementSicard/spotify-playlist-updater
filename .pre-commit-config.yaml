@@ -8,8 +8,10 @@ repos:
         args: ["--unsafe"]
       - id: check-toml
       - id: check-json
+        exclude: ".vscode"
       - id: check-ast
       - id: pretty-format-json
+        exclude: ".vscode"
         args:
           - "--autofix"
           - "--indent=4"
