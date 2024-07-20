@@ -39,13 +39,6 @@ repos:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix, --line-length, "120"]
 
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.0.0-alpha.9-for-vscode
-    hooks:
-      - id: prettier
-        files: \.(md|yaml|yml)$
-        exclude: "mkdocs.yml"
-
   - repo: local
     hooks:
       - id: run-mypy-checks
