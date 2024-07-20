@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "python-template"
+name = "spotify-playlist-updater"
 version = "0.1.0"
-description = "Poetry package for easy Python repo creation"
+description = "Job to automatically update by-artists playlists when new music is released"
 authors = ["Clément Sicard <clement@sicard.ch>"]
 license = "MIT"
 readme = "README.md"
@@ -10,6 +10,7 @@ packages = [{ include = "src", from = "." }]
 [tool.poetry.dependencies]
 python = "^3.10"
 loguru = "^0.7.2"
+spotipy = "*"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.4.2"
@@ -36,8 +37,49 @@ verbose = 2
 line-length = 120
 show-source = true
 
+[tool.ruff.lint]
+select = [
+    "F",     # pyflakes
+    "UP",    # pyupgrade
+    "S",     # bandit
+    "D",     # pydocstyle
+    "W",     # warning
+    "B",     # bugbear
+    "INP",   # __init__.py
+    "COM",   # commas
+    "SLF",   # private access
+    "TID",   # tidy imports
+    "TD",    # todos
+    "PD",    # pandas
+    "PL",    # pylint
+    "NPY",   # numpy
+    "RUF",   # ruff
+    "ASYNC", # async
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
 [tool.isort]
-profile = "black"
+py_version = "312"
+line_length = 1000
+lines_after_imports = 2
+single_line_exclusions = ["collections.abc", "typing", "typing_extensions"]
+known_typing = ["typing", "types", "typing_extensions"]
+sections = [
+    "FUTURE",
+    "STDLIB",
+    "TYPING",
+    "THIRDPARTY",
+    "FIRSTPARTY",
+    "LOCALFOLDER",
+]
+include_trailing_comma = true
+profile = "google"
+multi_line_output = 3
+indent = 4
+color_output = true
+sort_order = "native"
 
 [tool.black]
 line-length = 120
