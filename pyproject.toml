@@ -11,6 +11,7 @@ packages = [{ include = "src", from = "." }]
 python = "^3.10"
 loguru = "^0.7.2"
 spotipy = "*"
+python-dotenv = "^1.0.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.4.2"
@@ -24,6 +25,7 @@ mypy = "1.7.0"
 pre-commit = "^3.6.2"
 pytest = "^8.2.0"
 poetry-plugin-export = "^1.6.0"
+notebook = "^7.2.1"
 
 [tool.interrogate]
 ignore-init-method = true
