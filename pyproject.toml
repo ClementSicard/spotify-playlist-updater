@@ -12,7 +12,7 @@ python = "^3.10"
 loguru = "^0.7.3"
 spotipy = "*"
 python-dotenv = "^1.0.1"
-tqdm = "^4.66.6"
+tqdm = "^4.67.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.4.2"
